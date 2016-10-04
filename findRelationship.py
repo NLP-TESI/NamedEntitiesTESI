@@ -47,22 +47,29 @@ class Relationships:
 			# gera duplas de entidades seguidas na sentença
 			for index in range(1,len(entities_of_sentence)):
 				entities_double = (entities_double[index-1], entities_double[index])
-				relationsship = self._getRelationship(entities_double, tokens)
-				self.relationships.append(relationsship)
+				relationsship = self._getRelationship(entities_double, tagging_tokens)
+				if relationsship is not None:
+					self.relationships.append(relationsship)
 
 	def _getEntitiesOfSentence(self, tokens, entities):
 		tokens_entities = []
 		for index in range(len(tokens)):
 			token = tokens[index]
 			if token in entities.entities:
-				tokens_entities.append((token, index)
+				tokens_entities.append((token, index))
 		return tokens_entities
 
 	def _getRelationship(entities_double, tokens_sentence):
-		# identifica o verbo entre duas entidades.
-		# gera uma tripla.
-		# retorna a relação.
-		pass
+		start = entities_double[0][1]
+		end = entities_double[1][1]+1
+		relationship = None
+		for index in range(start, end):
+			if tokens_sentence[index][1] == 'VBZ':
+				relationship = (entities_double[0], tokens_sentence[index], entities_double[1])
+		return relationship
+
+	def __len__(self):
+		return len(self.relationships)
 
 	def __iter__(self):
 		self.i = 0
