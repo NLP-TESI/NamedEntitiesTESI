@@ -1,0 +1,57 @@
+nome 1, nome 2, metrica, resultado
+Jon Snow,Jon,jaro,0.7916666666666666
+Jon Snow,Jon,jaro winkler,0.7916666666666666
+Jon Snow,Jon,jaccard,0.5
+Jon Snow,Jon,levenshtein,0.625
+Jon Snow,Snow,jaro,0.4166666666666667
+Jon Snow,Snow,jaro winkler,0.4166666666666667
+Jon Snow,Snow,jaccard,0.33333333333333337
+Jon Snow,Snow,levenshtein,0.5
+Jon Snow,Lord Snow,jaro,0.8055555555555555
+Jon Snow,Lord Snow,jaro winkler,0.8055555555555555
+Jon Snow,Lord Snow,jaccard,0.4444444444444444
+Jon Snow,Lord Snow,levenshtein,0.3333333333333333
+Jon Snow,Jon Paul,jaro,0.6666666666666666
+Jon Snow,Jon Paul,jaro winkler,0.6666666666666666
+Jon Snow,Jon Paul,jaccard,0.6
+Jon Snow,Jon Paul,levenshtein,0.5
+Jon Snow,Lord Joseph,jaro,0.5492424242424242
+Jon Snow,Lord Joseph,jaro winkler,0.5492424242424242
+Jon Snow,Lord Joseph,jaccard,0.7692307692307692
+Jon Snow,Lord Joseph,levenshtein,0.8181818181818182
+Ned Stark,Ned,jaro,0.7777777777777777
+Ned Stark,Ned,jaro winkler,0.7777777777777777
+Ned Stark,Ned,jaccard,0.6666666666666667
+Ned Stark,Ned,levenshtein,0.6666666666666666
+Ned Stark,Stark,jaro,0.0
+Ned Stark,Stark,jaro winkler,0.0
+Ned Stark,Stark,jaccard,0.4444444444444444
+Ned Stark,Stark,levenshtein,0.4444444444444444
+Ned Stark,Lord Stark,jaro,0.825925925925926
+Ned Stark,Lord Stark,jaro winkler,0.825925925925926
+Ned Stark,Lord Stark,jaccard,0.36363636363636365
+Ned Stark,Lord Stark,levenshtein,0.3
+Ned Stark,Lord Eddard,jaro,0.6026936026936026
+Ned Stark,Lord Eddard,jaro winkler,0.6026936026936026
+Ned Stark,Lord Eddard,jaccard,0.6666666666666667
+Ned Stark,Lord Eddard,levenshtein,0.6363636363636364
+Ned Stark,Eddard Stark,jaro,0.6917989417989419
+Ned Stark,Eddard Stark,jaro winkler,0.6917989417989419
+Ned Stark,Eddard Stark,jaccard,0.30000000000000004
+Ned Stark,Eddard Stark,levenshtein,0.4166666666666667
+Theon Greyjoy,Theon,jaro,0.7948717948717948
+Theon Greyjoy,Theon,jaro winkler,0.8769230769230769
+Theon Greyjoy,Theon,jaccard,0.5
+Theon Greyjoy,Theon,levenshtein,0.6153846153846154
+Theon Greyjoy,Greyjoy,jaro,0.553113553113553
+Theon Greyjoy,Greyjoy,jaro winkler,0.553113553113553
+Theon Greyjoy,Greyjoy,jaccard,0.4
+Theon Greyjoy,Greyjoy,levenshtein,0.46153846153846156
+Theon Greyjoy,Lord Greyjoy,jaro,0.777065527065527
+Theon Greyjoy,Lord Greyjoy,jaro winkler,0.777065527065527
+Theon Greyjoy,Lord Greyjoy,jaccard,0.41666666666666663
+Theon Greyjoy,Lord Greyjoy,levenshtein,0.38461538461538464
+Theon Greyjoy,Yara Greyjoy,jaro,0.719017094017094
+Theon Greyjoy,Yara Greyjoy,jaro winkler,0.719017094017094
+Theon Greyjoy,Yara Greyjoy,jaccard,0.41666666666666663
+Theon Greyjoy,Yara Greyjoy,levenshtein,0.38461538461538464

@@ -1,0 +1,533 @@
+Arya,Arya Stark,Arry
+Astapor
+Baratheon,Barra,Barristan,Barristan Selmy,Baratheons
+Bones
+Bran,Bran Stark,Brandon
+Brienne
+Bronn,Broken Tower
+Catelyn,Catelyn Stark,Casterly Rock
+Daenerys Targaryen,Daenerys,Dany,Daenerys Stormborn
+Dagmer,Dagmer Cleftjaw
+Davos,Davos Seaworth
+Dreadfort
+First Men,Fist,First,First Builder,First Builder Othell Yarwyck,First Sword,First Ranger
+Gendry
+Grenn,Grey Wind
+Greyjoy,Gregor,Greyjoys,Grey,Grey Worm,Greyscale,Greyguard
+Hand,Hands,Haunted Forest
+Harrenhal
+Hot Pie
+House,House Frey,House Stark,House Tyrell,Hound,House Greyjoy
+Jaime,Jaime Lannister,Jamie
+Jaqen,Jaqen H'ghar
+Joffrey Baratheon,Joffrey
+Jon,Jon Snow,Jon Stark,Jon Sn,Jon Arryn
+Jorah Mormont,Jorah
+King,Kingsguard,Kingsroad,King Robb Stark,Kingslayer,Kingdom
+Lady Talisa Maegyr,Lady,Lady Olenna Tyrell,Lady Lysa Arryn,Lady Margaery Tyrell
+Lord,Lord Commander,Lord Eddard Stark,Lord Commander Jeor Mormont,Lord Commander Jon Snow,Lord Commander Snow,Lord Commander Mormont,Lord Paramount,Lord Commander Alliser Thorne,Lord Commander Barristan Selmy,Lord Beric Dondarrion
+Luwin
+Narrow Sea
+North,Northern,Northerners,Farther,Northmen,Northeners,Nothing
+Osha
+Qarth,Tarth
+Qhorin,Qhorin Halfhand
+Rickon,Rickon Stark,Rickard,Rickard Karstark,Rickard Stark
+Robb,Robb Stark,Robert,Robin
+Roose Bolton,Roose
+Ros,Roslin,Roslin Frey
+Sam
+Samwell Tarly,Samwell,Samwall
+Sansa,Sansa Stark,Sand Snakes,Sansa Robb,Sansaʼs
+Ser,Seaworth
+Ser Gregor Clegane,Ser Gregor,Ser Meryn
+Ser Jaime Lannister,Ser Lancel Lannister
+Ser Jorah,Ser Davos,Ser Bronn,Ser Loras,Ser Kevan,Ser Waymar
+Seven Kingdoms,Seven
+Shae,Shadow,Shadow Tower,Shadow Lands
+Stannis,Stannis Baratheon
+Theon,Theon Greyjoy,Throne Room,Thorne
+Tyrion,Tyrion Lannister
+Tywin,Tywin Lannister,Twins
+Varys,Vardis
+Wall,Walker,Walder,Walder Frey,Walda,Walkers
+Westerlands,Westeros,Westoros
+Winterfell
+Yara,Yara Greyjoy
+Ygritte
+Alton,Alton Lannister
+Baelish,Lord Baelish
+Balon,Balon King,Baelor
+Captain,Capital,Cat
+Cersei,Cersei Lannister
+Commander,Commander Jeor Mormont,Commander Mormont,Common Tongue,Commander Janos Slynt
+Craster,Crag,Crasters Keep
+Dothraki,Dothraki Sea
+Dragonstone,Dragons,Drogo,Drogon,Drogoʼs
+Ghost
+Gilly
+Gold Cloaks,Gold Dragons
+Grand,Garden
+Iron Islands,Iron,Iron Throne,Iron Bank,Ironborn,Iron Fleet
+Irri
+Janos,Janos Slynt
+Lannisters,Lannister,Lanna,Lyanna,Lyanna Stark
+Lord Janos Slynt,Lord Jon Arryn,Lord Renly,Lord Roose Bolton,Lord Robin Arryn,Lord Royce,Lord Bolton,Lord Renly Baratheon
+Lordsport,Loras
+Lysene,Lys,Lysa,Lysa Arryn,Lysa Tully
+Maester Pycelle,Grand Maester Pycelle
+Matthos Seaworth,Matthos
+Melisandre,Melara,Melara Hetherspoon
+Night,Night Lands,Light,Nightshade,Night King
+Petyr,Petyr Baelish
+Pyke
+Queen Regent Cersei Lannister,Queen Cersei,Queen Regent Cersei,Queen Regent,Queen Selyse,Queen Selyse Baratheon,Queen Daenerys Targaryen,Queen Cersei Lannister
+Rakharo
+Riverlands,Rivermen,Riverrun,Raven
+Rorge
+Royal,Royal Fleet,Royce
+Salladhor Saan,Salladhor,Salt Throne
+Ser Jorah Mormont,Ser Mandon
+Stark,Starks,Styr,Stark Valyrian
+Targaryen,Tarly,Targaryens,Targaryen Kingsguard
+Watch
+Yoren
+Annoyed
+Battle
+Bolton,Boltons,Book
+Brotherhood,Brotherhood Without Banners,Brother Lancel,Brothers,Brother,Bread
+Clegane,Cleon
+Curious,Furious
+Daisy
+Deeply
+Discouraged
+Eddard Stark,Eddard,Edd
+Kovarro
+Lady Stark,Lady Catelyn,Lady Olenna,Lady Crane,Lady Catelyn Stark
+Lancel,Lancel Lannister,Dance
+Littlefinger,Little Sam
+Lord Tywin,Lord Tywin Lannister,Lord Cerwyn,Lord Selwyn,Lord Selwyn Tarth,Lord Frey,Lord Hoster Tully
+Mad,Mandon
+Margaery,Margaery Tyrell,Marei
+Meryn,Meryn Trant Ser Meryn Trant,Meryn Trant
+Ned Stark
+Oxcross
+Queen Margaery Tyrell,Queen Margaery,Queen,Queen Mother,Queen Daenerys,Queen Talisa,Queensgard,Queensguard
+Red,Red Fork
+Red Waste,Red Comet
+Renly,Renly Baratheon
+Rennick
+Rides
+Robert Baratheon
+Sandor,Sandor Clegane,Sand
+Ser Amory Lorch,Ser Amory,Ser Ilyn
+Ser Davos Seaworth
+Ser Loras Tyrell,Ser Boros Blount
+Ser Meryn Trant,Ser Barristan,Ser Barristan Selmy
+Silent,Silent Sisters
+Small Council,Smalljon,Smalljon Umber
+Spice King
+Sumai
+Talisa,Talisa Maegyr
+Trant
+Volantis,Volantene
+Xaro Xhoan Daxos,Xaro
+Amory Lorch,Amory,Army
+Asshai
+Enraged
+Hodor
+Karstark,Karsi,Karl,Karstarks
+Lorch,Lord Yohn,Lord Yohn Royce
+Lord Rickard Karstark,Lord Karstark,Lord Rickard,Lord Stark,Lord Varys,Lord Petyr,Lord Eddard
+Lorren,Torrhen,Torrhen Karstark
+Maester,Maester Luwin,Maester Aemon,Maesters,Master,Good Masters,Maester Wolkan,Maester Caleotte
+Myrcella,Myrcella Baratheon
+Pyat,Pyat Pree
+Quaithe
+Snow,Sow
+Thirteen,Shireen,Shireen Baratheon
+Tommen,Tommen Baratheon
+Wildlings,Wildfire,Willem
+Xhoan Daxos
+Blackwater,Black,Blackwater Bay,Blackfish,Black Rat,Black Walder,Black Walder Rivers,Black Cells,Blackmont
+Braavos,Braavosi,Braavosi Water Dancer
+Camp
+Chosen
+City,City Watch
+Doreah,Dorne,Doran,Doran Martell,Dornish
+Houses Lannister,House Martell,House Baratheon,House Targaryen,Houses Targaryen,House Mormont,Houses Jon,House Reyne,Houses Reyne,House Bolton,House Tarth,House Clegane,Horses
+Mance Rayder,Mance,Mace,Mace Tyrell
+Pentos,Pentoshi
+Pycelle
+Red Priestess,Red Keep
+Rhaego,Rhaegar,Rhaegar Targaryen,Rhaegal,Rhaenyra,Rhaenyra Targaryen,Rhaenys
+Savior,Savo
+Ser Mandon Moore,Ser Rodrik Cassel,Ser Rodrik
+Tyrell,Tyrells,Orell
+Valar Morghulis,Vala
+Valyrian,Vale,Valyria,Low Valyrian
+White Walkers
+Wights,Sight
+Benjen Stark,Benjen
+Castle Black,Castle Stokeworth,Castle,Castamere
+Deepwood Motte
+Drowned Priest,Drowned God
+Greenhands,Greensight
+Jeor,Jeor Mormont
+Lommy,Lommy Greenhands
+Mormont,Moro,Mormonts,Mord
+Needle,Ned
+Polliver
+Princess Myrcella Baratheon,Prince Tommen Baratheon,Prince,Princess Myrcella,Prince Doran Martell,Prince Rhaegar,Prince Doran,Princess Shireen,Princess Shireen Baratheon,Prince Trystane,Prince Oberyn,Pie,Prince Oberyn Martell,Prince Rhaegar Targaryen,Princess Daenerys
+Stony Shore,Stone Men
+Conclave,Council
+Cressen
+Dolorous Edd
+Dontos,Doom
+Faith,Faith Militant
+Godswood,Gods,Gods Eye
+Khal Drogo,Khal Moro,Khalar,Khal Drogoʼs
+Mott
+Ser Dontos Hollard,Ser Gerold Hightower
+Summer,Mummer,Summer Isles
+Tobho,Tobho Mott
+Wind,Widow
+Alchemists
+Hallyne,Hall,Halfhand
+Highgarden,High Septon,High Sparrow,High Valyrian,High,High Red,High Hall
+Skirling Pass
+Tickler
+Wisdom Hallyne
+Frostfangs
+Outside
+Ramsay Snow,Ramsay,Ramsay Bolton
+Reach,Realm
+Rodrik Cassel,Rodrik
+Shaggydog,Shagga
+Square
+Trystane Martell,Trystane,Trystane Martell Jaime
+Crown,Crow,Crownlands,Crown Prince Rhaegar Targaryen
+Loras Tyrell,Loraq,Lord Walder
+Maegor,Mago
+Mud Gate
+Podrick,Podrick Payne,Pod
+Ser Ilyn Payne,Ser Lancel,Ser Duncan
+Bay
+Eddison Tollett,Eddison
+Essos
+Faceless,Faceless Men,Faces,Graces
+Free Folk,Free
+Great Houses,Great Masters,Great Pit,Great Pyramid,Great Sept,Great,Great Ranging,Great Khal,Greatjon Umber,Greatjon
+Hardhome
+Kevan,Kevan Lannister
+Loboda
+Longclaw,Long Farewell
+Meereen,Meereenese,Meera Reed,Meera,Meereenese Great Masters
+Old Tongue,Old Bear,Old Nan
+Olly,Old Valyria,Old Wyk
+Qaggaz
+Qyburn,Qyburn Grand Maester
+Rayder
+Reek,Reeds,Reed
+Septa,Sept,Septa Unella,Septon,Septa Mordane
+Slaver,Slavers Bay
+Tormund,Tormund Giantsbane
+Townshall,Town
+Unella
+Wun Wun
+Yezzan
+Alliser Thorne,Alliser
+Areo Hotah,Areo
+Bear Island,Bear
+Coin,Coin Mace Tyrell
+Daario,Daario Naharis
+Denys Mallister
+Ellaria,Ellaria Sand,Elliaria
+Free Cities,Free City
+Freys,Frey,Forest
+Harpy
+Hizdahr
+Hotah,Hot
+Lady Lyanna Mormont,Lyanna Mormont
+Lollys,Lollys Stokeworth
+Mad King
+Mossador
+Oberyn,Oberyn Martell
+Second Sons,Second
+Selmy,Selyse
+Ser Willas Bracken,Ser Alliser Thorne,Ser Alliser
+Ships
+Slynt
+Son,Sons
+Ternesio,Terys
+Titan
+Unsullied,Unsure
+Viserys,Viserion,Viper
+Water Gardens,Water Dancer
+Whisperers
+Brutal
+Elia Martell,Elia
+Estermont
+Flea Bottom,Flea
+Naharis
+Nymeria,Nymeria Sand,Nym
+Obara
+Oldtown,Old
+Olenna,Olenna Tyrell
+Olyvar,Olyvar Frey
+Planky Town
+Sapphire Isle
+Stormlands,Storm,Strong
+Sunspear
+Tyene,Tyene Sand
+Warden
+Worm
+Aegon V,Aegon,Aegon Targaryen,Aeron,Aeron Greyjoy
+Aemon,Aemon Sam,Aemon Targaryen
+Afterward
+Daznak
+Dornishman
+Landing,Lands
+Laws
+Malko,Marillion
+Wise,Wise Masters
+Citadel
+Martells,Martell,Masters
+Missandei
+Myranda,Myrnada,Myr
+Syrio Forel,Syrio
+Waif
+Dragon Queen
+Long Bridge,Long Night
+Moat Cailin
+Priestess,High Priestess
+Sick
+Sparrows,Sparrow
+Thoros
+Illyrio Mopatis,Illyrio
+Maggy,Mag
+Payne,Dayne
+Prologue
+Runestone
+Sweetrobin Arryn
+Unable
+Unafraid
+Woods
+Yohn Royce
+Young
+Yunkai,Yunkish
+Ashford
+Pyp,Pypar
+Randyll Tarly,Randyll
+Smoking Sea
+Anara
+Brusco
+Cryptically
+Grand Maester Munkun,Grand Maester Kaeth
+Lhara,Lhazareen,Lhazar
+Norvosi
+Thin
+Tycho,Tycho Nestoris
+Against
+Balon Greyjoy
+Bastard
+Ghezn
+Mero
+Prendahl
+Trident,Trident River
+Edmure,Edmure Tully
+Hoster Tully,Hoster,House Tully
+Howland,Howland Reed,Hollard
+Jojen,Jojen Reed
+Locke
+Lord Howland Reed,Lord Mace Tyrell,Lord Walder Frey,Lords Walder Frey,Lord Petyr Baelish
+Men
+Rains
+Rast,East
+South
+Tourney
+Undeterred
+Bannen,Banners,Bank
+Beric,Beric Dondarrion,Bert
+Dondarrion
+Gregor Clegane
+Hollow Hill
+Karl Tanner,Karlon Stark
+Kraznys
+Liberation
+Mycah
+Nakloz
+Quick,Quickly
+Ser Beric Dondarrion,Ser Gerold
+Eraz
+Horrified
+Maiden Fair
+Razdal
+Steelshanks
+Bewildered
+Brynden Tully,Brynden
+Drunk
+Nightfort,Nights Watch,Nightʼs Watch
+Old Ghiscari,Old Gods
+Onion Knight
+R'hllor
+Rat Cook
+Red Wedding
+Tully,Tullys,Tall
+Unburnt
+Arryn
+Crossroads,Crossroads Inn
+Genna
+Inn
+Kayla
+Martyn Lannister,Martyn
+Naath
+Punishment
+Stone Mill
+Wolf,Wolfswood
+En
+Joanna
+Painted Table
+Warlocks
+Aerys,Aerys Targaryen
+Angered
+Anguy
+Conquer,Conqueror,Conquest
+Greyjoy Rebellion
+House Karstark,House Baelish,Houses,House Arryn
+Obedient
+Oblivious
+Poppy
+Ser Onion Knight,Ser Hugh
+Siege
+Tysha
+Willem Lannister,Will
+Dragonglass,Dragon
+Karhold
+Lothar Frey,Lothar
+Builder
+Gift
+Joyeuse,Joy,Jory,Jory Cassel
+Lady Joyeuse
+Lame Lothar
+Aunt Lyanna
+Euron,Euron Greyjoy
+Harald Karstark
+Ice Cells
+Kingsmoot,Kingswood
+Leaf
+Satisfied
+Uncle Benjen
+Aggo,Iggo
+Ahko,Akho
+Belicho Paenymion
+Dosh Khaleen
+Fingers
+Good Masters of Astapor
+Khaleesi,Khal,Khals
+Master Razdal,Master Mighdal
+Moon Door
+Ornela
+Robin Arryn
+Vaes Dothrak
+Arthur
+Bowen,Bowen Marsh
+Horn Hill
+Mutiny
+Othell Yarwyck
+Ser Arthur,Ser Arthur Dayne
+Sword
+Tower
+Yarwyck
+Girls
+AND Wylis
+Bianca
+Bloody Hand,Bloody Gate
+Cerwyns
+Children
+Glovers
+Inside
+Kinvara
+Mazins
+Mole
+Red Temple
+Umbers,Umber
+Weirwood
+Wylis,Wylla,Wyl
+Alayne
+Berserk
+Corbray
+Eyrie
+Lady Anya Waynwood
+Mountain
+News,Nedʼs,New
+Orson,Orson Lannister
+Ralf Kenning
+Ser Donnel Waynwood,Ser Dontos
+Ser Vance Corbray,Ser Waymar Royce
+Thoughtful
+Unexpected
+Waynwood
+Axell Florent
+Lives of Four Kings
+NORTH
+Walda Bolton
+Always Winter
+Ghis
+Biter
+Lannister Monster,Lannister Camp
+Beyond
+Calla,Zalla
+Columns
+Crying
+Distraught
+Far
+Fennesz,Fennez
+Mighdal,Mighty
+Oathkeeper
+hand-to-hand
+Famished
+King Joffrey
+Book of Brothers
+Dontos Hollard
+Keep
+Sissy
+Hill
+Hobb
+Mar Tun Doh Weg
+Green Fork
+Jafer Flowers
+Mirri Maz Duur,Mirri
+Neck
+Othor
+River Trident
+Someone
+Sworn Brothers
+Jhiqui
+Mikken
+Cripples
+Guard,Gared
+Lord Randyll Tarly
+Piggy
+Arbor
+Armeca
+Lord Stannis,Lord Snow
+Duur
+Ilyn Payne,Ilyn
+Maz Duur
+Robbʼs
+Nan
+Qohor,Qotho
+Direwolves
+Imp
+Magister Illyrio Mopatis
+Waymar
+Flowers
+Heward
+Littefinger
+Mhaegen
+Egen
+Ser Vardis Egen
+Stiv
+Blessed
+
