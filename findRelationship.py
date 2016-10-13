@@ -65,7 +65,7 @@ class Relationships:
 				self._findRelationshipsInSentence(sentence, entities)
 				print("\r "+str(count)+" of "+str(total),end='')
 				count += 1
-		print('\r'+(' '*100)+'\n')
+		print('\r'+(' '*100)+'\r',end='')
 
 	def _findRelationshipsInSentence(self, sentence, entities):
 		tokens = nltk.word_tokenize(sentence)
@@ -96,7 +96,7 @@ class Relationships:
 		relationship = None
 		for index in range(start, end):
 			if tokens_sentence[index][1] == 'VBZ':
-				relationship = (entities_double[0], tokens_sentence[index], entities_double[1])
+				relationship = (entities_double[0][0], tokens_sentence[index][0], entities_double[1][0])
 		return relationship
 
 	def __len__(self):
@@ -107,9 +107,22 @@ class Relationships:
 		return self
 
 	def __next__(self):
-		if self.i >= self.length:
+		if self.i >= len(self.relationships):
 			raise StopIteration
 		else:
 			relationship = self.relationships[self.i]
 			self.i += 1
 			return relationship
+
+class RelationshipOnCSV:
+
+	def __init__(self, relationships, filename='relationship.csv'):
+		self.relationships = relationships
+		self.filename = filename
+
+	def save(self):
+		outfile = open(self.filename, 'w+')
+		outfile.write("entity1,relationship,entity2\n")
+		for relationship in self.relationships:
+			outfile.write(relationship[0]+","+relationship[1]+","+relationship[2]+"\n")
+		outfile.close()
