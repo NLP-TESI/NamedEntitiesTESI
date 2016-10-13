@@ -42,7 +42,19 @@ class BagOfEntities:
 		if(os.path.exists(lists_path)):
 			self._init_by_files()
 		else:
-			self._init_by_got_files(got_files)		
+			self._init_by_got_files(got_files)
+
+	def __iter__(self):
+		self.iterator = 0
+		self._keys = [ ent for ent in self._dic ]
+		return self
+
+	def __next__(self):
+		if self.iterator >= len(self._keys):
+			raise StopIteration
+		else:
+			self.iterator += 1
+			return self._keys[self.iterator-1]
 
 	def _init_by_files(self):
 		lists_file = open(self._lists_path)

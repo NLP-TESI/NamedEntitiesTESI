@@ -1,19 +1,27 @@
 #!/usr/bin/python3
-
-from findNamedEntities import *
+from GOTTESI import *
+import TratarTexto
+from NamedEntities import *
 from findRelationship import *
 
-episodes = EpisodesFiles("./episodes")
+def main():
+    epi_dir = 'episodes'
+    epi_pre_dir = 'episodes_preproc'
 
-namedEntities = NamedEntities(episodes)
+    TratarTexto.pre_processar_base_got(epi_dir, epi_pre_dir)
+    files = GOTFiles(epi_pre_dir)
+    bag = BagOfEntities(files, 'lists_of_entities.txt')
+    bag.save_in_file()
 
-#for entity in namedEntities:
-#	print(entity)
+    #number of entities
+    print(str(len(bag)) + " entidades")
 
-print (str(len(namedEntities)) + " entidades")
+    #getting all the sentences to use in relationships preprocessing
+    episodes = EpisodesFiles("./"+epi_dir)
+    episodes_sentences = EpisodesSentences("./"+epi_dir)
 
-episodes_sentences = EpisodesSentences("./episodes")
+    #getting all the relationships
+    relationships = Relationships(bag, episodes_sentences)
+    print(str(len(relationships)) + " relationships")
 
-relationships = Relationships(namedEntities, episodes_sentences)
-
-print (str(len(relationships)) + " relationships")
+main()
