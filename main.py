@@ -10,7 +10,7 @@ def main():
 
     #getting entities
     print("Getting entities")
-    TratarTexto.pre_processar_base_got(epi_dir, epi_pre_dir)
+    TratarTexto.pre_process_got_base(epi_dir, epi_pre_dir)
     files = GOTFiles(epi_pre_dir)
     bag = BagOfEntities(files, 'lists_of_entities.txt')
     bag.save_in_file()
