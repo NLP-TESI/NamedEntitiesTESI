@@ -39,27 +39,35 @@ class EpisodeFile:
 		sentences = nltk.sent_tokenize(self._text)
 		sentences = list(filter(('\n').__ne__, sentences))
 
+		local_entities = {}
 		taggeds = []
-		entity_dic = {}
-		for sentence in sentences:
-			result_tagged, entities = self._analyze_sentence_with_chunk(sentence)
+		for index, sentence in enumerate(sentences):
+			sentence_id = str(self._season) + str(self._ep_number) + str(index)
+			result_tagged, entities = self._analyze_sentence_with_chunk(sentence, sentence_id)
 			taggeds.extend(result_tagged)
-			entity_dic.update(entities)
+			
+			for key in entities:
+				e = entities[key]
+				term = list(e.terms().keys())[0]
+				if term in local_entities:
+					local_entities[term].add_entity(e)
+				else:
+					local_entities[term] = e
 
-		entity_list = TESIUtil.dict_to_list(entity_dic)
-		merged_entities = self._find_similar_entities(entity_list, global_entities_dic)
+		global_entities_dic = self._find_similar_entities(global_entities_dic, local_entities)
 
-		return (taggeds, merged_entities)
+		return (taggeds, global_entities_dic)
 
-	def _find_similar_entities(self, entity_list, global_entities_dic):
+	def _find_similar_entities(self, global_entities_dic, local_entities_dic):
 		final_dict = global_entities_dic
 
-		for item1 in entity_list:
+		for key1 in local_entities_dic:
+			item1 = local_entities_dic[key1]
+
 			term1 = list(item1.terms().keys())[0]
 			str1 = TESIUtil.remove_honor_words(list(item1.terms().keys())[0])
 
-			best = None
-			best_avg = 0
+			betters = []
 
 			for key2 in final_dict:
 				item2 = final_dict[key2]
@@ -67,37 +75,45 @@ class EpisodeFile:
 				qty = 0
 
 				if(term1 in item2.terms()):
-					best = item2
-					best_avg = 1
-					break
-
-				for term2 in item2.terms():
-					str2 = TESIUtil.remove_honor_words(term2)
-					sum_sim += TESIUtil.string_similarity(str1, str2)
-					qty += 1
-				avg = sum_sim/qty
-				if(avg > best_avg):
-					best_avg = avg
-					best = item2
+					betters.append(item2)
+				else:
+					for term2 in item2.terms():
+						str2 = TESIUtil.remove_honor_words(term2)
+						sum_sim += TESIUtil.string_similarity(str1, str2)
+						qty += 1
+					avg = sum_sim/qty
+					if(avg > 0.7):
+						betters.append(item2)
 			
-			if(best_avg > 0.75):
-				best.add_name(term1)
-				final_dict[item1.id()] = best
-			else:
+			betters.sort(key=lambda item: item.frequency())
+
+			if(len(betters) == 0):
 				final_dict[item1.id()] = item1
+			else:
+				choosed = None
+				for candidate in betters:
+					if(choosed is None or 
+					  (choosed is not None and choosed.frequency() < candidate.frequency())):
+						choosed = candidate
+
+				if(choosed == None):
+					choosed = betters[0]
+
+				final_dict[item1.id()] = choosed
+				choosed.add_entity(item1)
 
 		return final_dict
 
-	def _add_in_entities_dictionary(self, dic, string):
+	def _add_in_entities_dictionary(self, dic, string, index):
 		if(string in dic):
 			e = dic[string]
-			e.add_name(string)
+			e.add_name(string, index)
 		else:
-			e = NamedEntity(string)
+			e = NamedEntity(name=string, last=index)
 			dic[string] = e
 		return e
 
-	def _analyze_sentence_with_chunk(self, sentence):
+	def _analyze_sentence_with_chunk(self, sentence, index):
 		tokenized = nltk.word_tokenize(sentence)
 		tagging = nltk.pos_tag(tokenized)
 		chunked = nltk.ne_chunk(tagging)
@@ -144,7 +160,7 @@ class EpisodeFile:
 				if(string.lower() in NOT_AN_ENTITY):
 					item = (string, 'SYM')
 				else:
-					e = self._add_in_entities_dictionary(dic_entities, string)
+					e = self._add_in_entities_dictionary(dic_entities, string, index)
 					item = (string, type_ne, e.id())
 				
 				result.append(item)

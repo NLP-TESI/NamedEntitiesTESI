@@ -19,38 +19,38 @@ def _pre_process_episode(path_destino, filename, texto):
 	lines_text = texto.split("\n")
 	lines_text = [x.strip() for x in lines_text]
 
-	nome_episodio = _get_episode_name(filename)
-	numero_episodio = _get_episode_number(texto)
+	ep_name = _get_episode_name(filename)
+	ep_number = _get_episode_number(texto)
 
-	ep_dir = build_dir_path(path_destino, numero_episodio)
+	ep_dir = build_dir_path(path_destino, ep_number)
 	create_or_replace_dir(ep_dir)
 
 	mortes_epi = _get_deaths_in_episode(lines_text, filename)
-	texto_preprocessado = _pre_process_text(lines_text)
+	preprocessed_text = _pre_process_text(lines_text)
 
-	save_file(ep_dir, 'ep_name.txt', nome_episodio)
-	save_file(ep_dir, 'ep_number.txt', numero_episodio)
+	save_file(ep_dir, 'ep_name.txt', ep_name)
+	save_file(ep_dir, 'ep_number.txt', ep_number)
 	save_file(ep_dir, 'original.txt', texto)
 	save_file(ep_dir, 'deaths.txt', mortes_epi)
-	save_file(ep_dir, 'clean_text.txt', texto_preprocessado)
+	save_file(ep_dir, 'clean_text.txt', preprocessed_text)
 
 def _get_deaths_in_episode(lines_text, filename):
-	termos_secao_mortes = ['Deaths', 'DeathsEdit', 'Deaths Edit']
+	terms_death_section = ['Deaths', 'DeathsEdit', 'Deaths Edit']
 	n = -1
 
-	for t in termos_secao_mortes:
+	for t in terms_death_section:
 		n = index_of(lines_text, t)
 		if(n != -1):
 			break
 
-	mortes_list = []
+	deaths_list = []
 	if(n != -1):
 		n = n + 1
-		mortes_list = lines_text[n:]
-		n = index_of(mortes_list, "")
-		mortes_list = mortes_list[:n]
+		deaths_list = lines_text[n:]
+		n = index_of(deaths_list, "")
+		deaths_list = deaths_list[:n]
 
-	return "\n".join(mortes_list)
+	return "\n".join(deaths_list)
 
 def _pre_process_text(lines_text):
 	lines_text = _cut_text_start(lines_text)
@@ -73,10 +73,10 @@ def _remove_useless_lines(lines_text):
 	return lines_text
 
 def _cut_text_end(lines_text):
-	termos_finais = ['Recap', 'RecapEdit', 'Appearances', 'AppearancesEdit', 'Appearances Edit']
+	finals_terms = ['Recap', 'RecapEdit', 'Appearances', 'AppearancesEdit', 'Appearances Edit']
 	n = -1
 
-	for t in termos_finais:
+	for t in finals_terms:
 		n = index_of(lines_text, t)
 		if(n != -1):
 			lines_text = lines_text[:n]

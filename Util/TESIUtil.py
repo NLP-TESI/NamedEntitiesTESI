@@ -7,7 +7,7 @@ import re
 
 HONOR_STOP_WORDS = ['ser', 'lord', 'commander', 'queen', 'regent', 'king', 'princess', 
 					'prince','lady', 'grand', 'maester', 'mad', 'septa', 'quickly', 'priestess',
-					'aunt', 'stormborn', 'jokingly', 'great']
+					'aunt', 'stormborn', 'jokingly', 'great', 'khal']
 
 def create_or_replace_dir(dir_path):
 	if (os.path.isdir(dir_path)):

@@ -30,7 +30,7 @@ class EntitiesExtractor:
 
 		for item in tagged:
 			if(item[1] in ['NE', 'HSE']):
-				string += ' <entity id='+ str(item[2]) +'>' + item[0] + '</entity>' 
+				string += ' <entity class="'+item[1]+'" id='+ str(item[2]) +'>' + item[0] + '</entity>' 
 			else:
 				string += ' ' + item[0]
 
