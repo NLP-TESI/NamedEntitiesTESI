@@ -44,7 +44,7 @@ class EpisodeFile:
 		for index, sentence in enumerate(sentences):
 			sentence_id = str(self._season) + str(self._ep_number) + str(index)
 			result_tagged, entities = self._analyze_sentence_with_chunk(sentence, sentence_id)
-			taggeds.extend(result_tagged)
+			taggeds.append(result_tagged)
 			
 			for key in entities:
 				e = entities[key]

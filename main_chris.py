@@ -2,7 +2,7 @@
 #from GOTTESI import *
 from Util import TextProcess
 from Util import TESIUtil
-from NamedEntities.EntitiesExtractor import EntitiesExtractor
+from NamedEntities.KnowledgeExtractor import KnowledgeExtractor
 from NamedEntities.NamedEntity import NamedEntitiesDict
 import sys
 
@@ -10,6 +10,7 @@ def main():
 	epi_dir = 'episodes'
 	epi_pre_dir = 'episodes_preproc'
 	entities_file = 'entities.csv'
+	relationships_file = 'relationships.csv'
 
 	if('preprocess' in sys.argv):
 		print('pre processing text... ', end='')
@@ -18,8 +19,9 @@ def main():
 
 	if('find_ne' in sys.argv):
 		print('identifying named entities...')
-		extractor = EntitiesExtractor(epi_pre_dir)
-		extractor.find_entities(entities_file)
+		extractor = KnowledgeExtractor(epi_pre_dir)
+		tagged = extractor.find_entities(entities_file)
+		#extractor.find_relationships(tagged, relationships_file)
 		print('ok')
 
 	if('merge_ne' in sys.argv):
