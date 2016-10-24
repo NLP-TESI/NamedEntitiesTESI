@@ -21,7 +21,7 @@ def main():
 		print('identifying named entities...')
 		extractor = KnowledgeExtractor(epi_pre_dir)
 		tagged = extractor.find_entities(entities_file)
-		#extractor.find_relationships(tagged, relationships_file)
+		extractor.find_relationships(tagged, relationships_file)
 		print('ok')
 
 	if('merge_ne' in sys.argv):

@@ -9,68 +9,102 @@ class KnowledgeExtractor:
 		files = FileSet(self._path)
 
 		entities = {}
-		current_index = 0
-		for f in files:
-			percent = current_index/len(files)*100
-			print(str(round(percent, 1)) + "% ("+ str(current_index+1) +" de " + str(len(files)) + ")")
+		all_tagged = []
+		for current_index, f in enumerate(files):
+			percent = (current_index+1)/len(files)*100
+			print("\r"+str(round(percent, 1)) + "% ("+ str(current_index+1) +" de " + str(len(files)) + ")", end="")
 			tagged, entities = f.markup_entities(entities)
 			self._save_tagged_text(f.path(), tagged)
-			current_index += 1
+			all_tagged += tagged
 
 		self._save_found_entities(self._path, file_to_save, entities)
 		distinct_size = len(TESIUtil.dict_to_list(entities))
 
 		print('\n\n' + str(len(entities)) + ' entities found')
-		print(str(distinct_size) + ' distinct entities')
+		print(str(distinct_size) + ' distinct entities\n')
 
-		return tagged
+		return all_tagged
+
+	def _get_composed_verbs(self, sentence, start, end):
+		composed_verb = sentence[start][0]
+		aux = ""
+		if('VB' in sentence[start][1]):
+			for index in range(start-1,end-1,-1):
+				if(index < 0 or start-index > 4):
+					break
+				item = sentence[index]
+				aux = item[0] + " " + aux
+				if("VB" in item[1]):
+					composed_verb = aux + composed_verb
+					break
+		return composed_verb
 
 	def find_relationships(self, tagged, file_to_save):
-		last_entity = None
-		last_entity_index = 0
-		last_relation = None
 		relationships = []
 
-		for sentence in tagged:
+		print("identifying relationships...")
+
+		for index_sentence, sentence in enumerate(tagged):
+			last_entity = None
+			last_entity_index = 0
+			last_relation = None
+
+			percent = (index_sentence+1)/len(tagged)*100
+			print("\r"+str(round(percent, 1)) + "% ("+ str(index_sentence+1) +" de " + str(len(tagged)) + ")", end="")
+
 			for index, item in enumerate(sentence):
+				if( len(item[0]) == 1 ):
+					continue
 				if('VB' in item[1]):
-					last_relation = item[0]
+					last_relation = self._get_composed_verbs(sentence, index, last_entity_index)
+				elif( index < len(sentence)-1 and 'IN' == item[1] and 'DT' == sentence[index+1][1]):
+					last_relation = item[0] + " " + sentence[index+1][0]
 				elif(item[1] in ['HSE', 'NE']):
 					if(last_entity is not None):
-						if(index-last_entity_index == 2):
+						if(index-last_entity_index == 2 and len(sentence[index-1][0])>1 ):
 							relation = (sentence[index-1][0], last_entity[2], last_entity[0], item[2], item[0])
 							relationships.append(relation)
-							print(relation)
+							#print(relation)
 						elif(last_relation is not None):
 							relation = (last_relation, last_entity[2], last_entity[0], item[2], item[0])
 							relationships.append(relation)
-							print(relation)
+							#print(relation)
 					last_entity = item
 					last_entity_index = index
 					last_relation = None
-			
 
-		return 'Hue'
+		self._save_relationships_csv(relationships, file_to_save)
+
+		print('\n\n' + str(len(relationships)) + ' relationships found\n')
+
+		return relationships
+
+	def _save_relationships_csv(self, relationships, file_to_save):
+		outfile = open(file_to_save, 'w+')
+		outfile.write("entity1,relationship,entity2\n")
+		for relationship in relationships:
+			outfile.write(relationship[2]+","+relationship[0]+","+relationship[4]+"\n")
+		outfile.close()
 
 	def _save_tagged_text(self, path, tagged):
 		string = ''
 
-		print("Saving tagged text in " + path)
+		#print("Saving tagged text in " + path)
 
 		for sentence in tagged:
 			for item in sentence:
 				if(item[1] in ['NE', 'HSE']):
-					string += ' <entity class="'+item[1]+'" id='+ str(item[2]) +'>' + item[0] + '</entity>' 
+					string += ' <entity class="'+item[1]+'" id='+ str(item[2]) +'>' + item[0] + '</entity>'
 				else:
 					string += ' ' + item[0]
 
 		string = string.strip()
 		TESIUtil.save_file(path, 'tagged_text.txt', string)
-	
+
 	def _save_found_entities(self, path, file_to_save, entities):
 		lines = []
 
-		print("Saving entities dict in " + path)
+		#print("Saving entities dict in " + path)
 
 		for key in entities:
 			item = entities[key]
@@ -81,4 +115,3 @@ class KnowledgeExtractor:
 			lines.append( ';'.join(tpl) )
 		string = '\n'.join(lines)
 		TESIUtil.save_file(path, file_to_save, string)
-
