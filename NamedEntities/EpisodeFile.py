@@ -3,7 +3,7 @@ import nltk
 from Util import TESIUtil	
 from NamedEntities.NamedEntity import NamedEntity
 
-NOT_AN_ENTITY = ['–', '–', '—', '[', '', 'imp', 'beyond', 'house']
+NOT_AN_ENTITY = ['–', '–', '—', '[', '', 'imp', 'beyond', 'house', 'ser ser']
 
 class EpisodeFile:
 	def __init__(self, path, season, ep_number):
@@ -23,6 +23,11 @@ class EpisodeFile:
 		self._text = file_text.read()
 		file_text.close()
 
+		if(os.path.isfile(os.path.join(path, 'tagged_text.txt'))):
+			file_tagged_text = open(os.path.join(path, 'tagged_text.txt'))
+			self._tagged_text = file_tagged_text.read()
+			file_tagged_text.close()
+
 	def path(self):
 		return self._path
 
@@ -31,6 +36,23 @@ class EpisodeFile:
 
 	def number(self):
 		return int(self._ep_number)
+
+	def text(self):
+		return self._text
+
+	def tagged_text(self):
+		return self._tagged_text
+
+	def save_tfidf(self, tfidf):
+		string = ""
+
+		for t in tfidf:
+			string += t + ";" + str(tfidf[t]) + "\n"
+
+		file_tfidf = open(os.path.join(self._path, 'tfidf.csv'), 'w')
+		file_tfidf.write(string)
+		file_tfidf.close()
+
 
 	def markup_entities(self, global_entities_dic):
 		return self._mark_named_entities(global_entities_dic)
@@ -177,6 +199,8 @@ class FileSet:
 		self._episodes = []
 
 		for season in os.listdir(dirname):
+			if('.csv' in season):
+					continue
 			for ep in os.listdir(os.path.join(dirname, season)):
 				episode = EpisodeFile(os.path.join(dirname, season, ep), season, ep)
 				self._episodes.append(episode)

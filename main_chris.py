@@ -4,6 +4,7 @@ from Util import TextProcess
 from Util import TESIUtil
 from NamedEntities.KnowledgeExtractor import KnowledgeExtractor
 from NamedEntities.NamedEntity import NamedEntitiesDict
+from TFIDF.TFIDF import TFIDFCalculator
 import sys
 
 def main():
@@ -24,6 +25,13 @@ def main():
 		extractor.find_relationships(tagged, relationships_file)
 		print('ok')
 
+	if('tfidf' in sys.argv):
+		print('calculating tfidf...')
+		tfidf_calc = TFIDFCalculator(epi_pre_dir)
+		tfidf_calc.calculateTFIDF()
+		print('ok')
+
+	# test code
 	if('merge_ne' in sys.argv):
 		print('loadig named entities from file...')
 		dic = NamedEntitiesDict.load_entities_dict_from_file(epi_pre_dir, entities_file)
