@@ -73,6 +73,14 @@ class EpisodeFile:
 				term = list(e.terms().keys())[0]
 				if term in local_entities:
 					local_entities[term].add_entity(e)
+					# updating id in tagged text
+					for k, item in enumerate(result_tagged):
+						if(item[1].lower() in ['ne', 'hse'] and item[2] == e.id()):
+							item = list(item)
+							item[2] = local_entities[term].id()
+							item = tuple(item)
+							result_tagged[k] = item
+
 				else:
 					local_entities[term] = e
 

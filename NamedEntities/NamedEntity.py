@@ -33,6 +33,9 @@ class NamedEntity:
 		if(i > NamedEntity.ID):
 			NamedEntity.ID = i+1
 
+	def change_id(self, i):
+		self._id = i
+
 	def set_terms(self, lst):
 		self._terms = lst
 
