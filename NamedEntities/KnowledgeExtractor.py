@@ -1,6 +1,7 @@
 from NamedEntities.EpisodeFile import *
 from Util import TESIUtil
 import re
+from collections import OrderedDict
 
 class KnowledgeExtractor:
 	def __init__(self, path):
@@ -83,6 +84,8 @@ class KnowledgeExtractor:
 					last_entity_index = index
 					last_relation = None
 
+		relationships_keys = OrderedDict(sorted(relationships_keys.items(), key=lambda t: t[0]))
+		relationships.sort(key=lambda t: t[0])
 		self._save_relationships_csv(relationships, file_to_save)
 		self._save_relationships_keys_csv(relationships_keys, file_to_save)
 
