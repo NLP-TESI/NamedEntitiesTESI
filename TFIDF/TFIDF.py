@@ -40,6 +40,32 @@ class TFIDFCalculator:
 
 			d.episode().save_tfidf(tfidf_episode)
 
+		final = {}
+		for item in tfidf:
+			for t in item:
+				final[t] = True
+
+		lista_tokens = list(final.keys())
+		print(str(len(lista_tokens)) + " distinct tokens")
+
+		matriz = []
+		for i, item in enumerate(tfidf):
+			vetor = []
+			for t in final:
+				if t in item:
+					vetor.append(item[t])
+				else:
+					vetor.append(0)
+			matriz.append(vetor)
+
+
+		s = 0
+		for d in documents:
+			for t in d.word_count():
+				s += d.word_count()[t]
+
+		print(s)
+
 		return tfidf
 
 	def _get_tf_from_doc(self, doc):
