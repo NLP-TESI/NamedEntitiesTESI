@@ -44,6 +44,7 @@ class KnowledgeExtractor:
 	def find_relationships(self, tagged, file_to_save):
 		relationships = []
 		relationships_keys = {}
+		stop_words = ["''", "King"]
 
 		print("identifying relationships...")
 
@@ -64,7 +65,7 @@ class KnowledgeExtractor:
 					last_relation = item[0] + " " + sentence[index+1][0]
 				elif(item[1] in ['HSE', 'NE']):
 					if(last_entity is not None):
-						if(index-last_entity_index == 2 and len(sentence[index-1][0])>1 ):
+						if(index-last_entity_index == 2 and len(sentence[index-1][0])>1 and sentence[index-1][0] not in stop_words ):
 							relation_key = sentence[index-1][0]
 							relation = (relation_key, last_entity[2], last_entity[0], item[2], item[0])
 							relationships.append(relation)
@@ -72,7 +73,7 @@ class KnowledgeExtractor:
 								relationships_keys[relation_key] = 0
 							relationships_keys[relation_key] += 1
 							#print(relation)
-						elif(last_relation is not None and len(re.findall(r"[^\w\s']", last_relation)) == 0):
+						elif(last_relation is not None and len(re.findall(r"[^\w\s']", last_relation)) == 0 and last_relation not in stop_words):
 							relation = (last_relation, last_entity[2], last_entity[0], item[2], item[0])
 							relationships.append(relation)
 							relation_key = last_relation

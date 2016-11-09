@@ -1,9 +1,4 @@
 entity1,relationship,entity2
-Hound,'',Clegane
-Hound,'',Clegane
-Hound,'',Clegane
-Hound,'',Clegane
-Watch,'',Thorne
 Hound,'re doing,Stark
 Dany,'s,Dothraki
 King,'s,Eddard
@@ -55,10 +50,6 @@ Waif,In,Braavos
 Prologue,In the,Westerlands
 Cersei,Jaime,Dorne
 Kevan Lannister,Jaime Lannister lead,North
-King,King,Robert
-Eddard Eddard,King,Joffrey
-King Renly Baratheon,King,Joffrey Baratheon
-King,King,Stannis Baratheon
 King,Landing,Bran
 King,Landing,Eddard
 King,Landing,Stannis Baratheon
