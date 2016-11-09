@@ -81,3 +81,11 @@ class NamedEntitiesDict:
 				entities_dict[idt] = entities_dict[ftr]
 
 		return entities_dict
+
+	@staticmethod
+	def get_entities_fathers_dictionary(dct):
+		lst = {}
+		for key in dct:
+			entity = dct[key]
+			lst[entity.id()] = entity.terms()
+		return lst

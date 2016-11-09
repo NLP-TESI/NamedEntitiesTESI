@@ -16,20 +16,23 @@ def main():
 	if('preprocess' in sys.argv):
 		print('pre processing text... ', end='')
 		TextProcess.pre_process_got_base(epi_dir, epi_pre_dir)
-		print('ok')
+		print('preprocess ok')
 
 	if('find_ne' in sys.argv):
 		print('identifying named entities...')
 		extractor = KnowledgeExtractor(epi_pre_dir)
 		tagged = extractor.find_entities(entities_file)
 		extractor.find_relationships(tagged, relationships_file)
-		print('ok')
+		print('find_ne ok')
 
-	if('tfidf' in sys.argv):
+	if('tfidf' in sys.argv or 'query' in sys.argv):
 		print('calculating tfidf...')
-		tfidf_calc = TFIDFCalculator(epi_pre_dir)
+		tfidf_calc = TFIDFCalculator(epi_pre_dir, entities_file)
 		tfidf_calc.calculateTFIDF()
-		print('ok')
+		print('tfidf ok')
+
+		if('query' in sys.argv):
+			tfidf_calc.query()
 
 	# test code
 	if('merge_ne' in sys.argv):
