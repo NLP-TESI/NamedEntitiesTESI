@@ -1,5 +1,7 @@
 from NamedEntities.EpisodeFile import *
 from Util import TESIUtil
+import re
+from collections import OrderedDict
 
 class KnowledgeExtractor:
 	def __init__(self, path):
@@ -41,6 +43,7 @@ class KnowledgeExtractor:
 
 	def find_relationships(self, tagged, file_to_save):
 		relationships = []
+		relationships_keys = {}
 
 		print("identifying relationships...")
 
@@ -62,22 +65,40 @@ class KnowledgeExtractor:
 				elif(item[1] in ['HSE', 'NE']):
 					if(last_entity is not None):
 						if(index-last_entity_index == 2 and len(sentence[index-1][0])>1 ):
-							relation = (sentence[index-1][0], last_entity[2], last_entity[0], item[2], item[0])
+							relation_key = sentence[index-1][0]
+							relation = (relation_key, last_entity[2], last_entity[0], item[2], item[0])
 							relationships.append(relation)
+							if relation_key not in relationships_keys:
+								relationships_keys[relation_key] = 0
+							relationships_keys[relation_key] += 1
 							#print(relation)
-						elif(last_relation is not None):
+						elif(last_relation is not None and len(re.findall(r"[^\w\s']", last_relation)) == 0):
 							relation = (last_relation, last_entity[2], last_entity[0], item[2], item[0])
 							relationships.append(relation)
+							relation_key = last_relation
+							if relation_key not in relationships_keys:
+								relationships_keys[relation_key] = 0
+							relationships_keys[relation_key] += 1
 							#print(relation)
 					last_entity = item
 					last_entity_index = index
 					last_relation = None
 
+		relationships_keys = OrderedDict(sorted(relationships_keys.items(), key=lambda t: t[0]))
+		relationships.sort(key=lambda t: t[0])
 		self._save_relationships_csv(relationships, file_to_save)
+		self._save_relationships_keys_csv(relationships_keys, file_to_save)
 
 		print('\n\n' + str(len(relationships)) + ' relationships found\n')
 
 		return relationships
+
+	def _save_relationships_keys_csv(self, relationships_keys, file_to_save):
+		outfile = open("keys_"+file_to_save, 'w+')
+		outfile.write("relationship,frequency\n")
+		for relationship in relationships_keys:
+			outfile.write(relationship+","+str(relationships_keys[relationship])+"\n")
+		outfile.close()
 
 	def _save_relationships_csv(self, relationships, file_to_save):
 		outfile = open(file_to_save, 'w+')
